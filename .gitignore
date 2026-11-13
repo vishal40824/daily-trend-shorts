@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Sensitive Credentials (NEVER COMMIT)
+client_secrets.json
+token.json
+.env
+
+# Large Output Render Files
+out/*.mp4
+temp/
+.remotion/
+whisper.cpp/
+*.zip
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

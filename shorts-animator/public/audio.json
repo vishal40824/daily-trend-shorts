@@ -1,0 +1,296 @@
+[
+  {
+    "text": "The",
+    "startMs": 100,
+    "endMs": 335,
+    "timestampMs": 100,
+    "confidence": 1.0
+  },
+  {
+    "text": " internet",
+    "startMs": 335,
+    "endMs": 961,
+    "timestampMs": 335,
+    "confidence": 1.0
+  },
+  {
+    "text": " is",
+    "startMs": 961,
+    "endMs": 1117,
+    "timestampMs": 961,
+    "confidence": 1.0
+  },
+  {
+    "text": " talking",
+    "startMs": 1117,
+    "endMs": 1665,
+    "timestampMs": 1117,
+    "confidence": 1.0
+  },
+  {
+    "text": " about",
+    "startMs": 1665,
+    "endMs": 2056,
+    "timestampMs": 1665,
+    "confidence": 1.0
+  },
+  {
+    "text": " this",
+    "startMs": 2056,
+    "endMs": 2369,
+    "timestampMs": 2056,
+    "confidence": 1.0
+  },
+  {
+    "text": " today",
+    "startMs": 2369,
+    "endMs": 2838,
+    "timestampMs": 2369,
+    "confidence": 1.0
+  },
+  {
+    "text": " Jensen",
+    "startMs": 2788,
+    "endMs": 3536,
+    "timestampMs": 2788,
+    "confidence": 1.0
+  },
+  {
+    "text": " Huang",
+    "startMs": 3536,
+    "endMs": 4159,
+    "timestampMs": 3536,
+    "confidence": 1.0
+  },
+  {
+    "text": " resigns",
+    "startMs": 4159,
+    "endMs": 5156,
+    "timestampMs": 4159,
+    "confidence": 1.0
+  },
+  {
+    "text": " This",
+    "startMs": 5156,
+    "endMs": 5438,
+    "timestampMs": 5156,
+    "confidence": 1.0
+  },
+  {
+    "text": " development",
+    "startMs": 5438,
+    "endMs": 6214,
+    "timestampMs": 5438,
+    "confidence": 1.0
+  },
+  {
+    "text": " is",
+    "startMs": 6214,
+    "endMs": 6355,
+    "timestampMs": 6214,
+    "confidence": 1.0
+  },
+  {
+    "text": " creating",
+    "startMs": 6355,
+    "endMs": 6920,
+    "timestampMs": 6355,
+    "confidence": 1.0
+  },
+  {
+    "text": " serious",
+    "startMs": 6920,
+    "endMs": 7414,
+    "timestampMs": 6920,
+    "confidence": 1.0
+  },
+  {
+    "text": " debate",
+    "startMs": 7414,
+    "endMs": 7837,
+    "timestampMs": 7414,
+    "confidence": 1.0
+  },
+  {
+    "text": " across",
+    "startMs": 7837,
+    "endMs": 8260,
+    "timestampMs": 7837,
+    "confidence": 1.0
+  },
+  {
+    "text": " the",
+    "startMs": 8260,
+    "endMs": 8472,
+    "timestampMs": 8260,
+    "confidence": 1.0
+  },
+  {
+    "text": " tech",
+    "startMs": 8472,
+    "endMs": 8754,
+    "timestampMs": 8472,
+    "confidence": 1.0
+  },
+  {
+    "text": " community",
+    "startMs": 8754,
+    "endMs": 9459,
+    "timestampMs": 8754,
+    "confidence": 1.0
+  },
+  {
+    "text": " Do",
+    "startMs": 9459,
+    "endMs": 9621,
+    "timestampMs": 9459,
+    "confidence": 1.0
+  },
+  {
+    "text": " you",
+    "startMs": 9621,
+    "endMs": 9864,
+    "timestampMs": 9621,
+    "confidence": 1.0
+  },
+  {
+    "text": " think",
+    "startMs": 9864,
+    "endMs": 10270,
+    "timestampMs": 9864,
+    "confidence": 1.0
+  },
+  {
+    "text": " this",
+    "startMs": 10270,
+    "endMs": 10594,
+    "timestampMs": 10270,
+    "confidence": 1.0
+  },
+  {
+    "text": " is",
+    "startMs": 10594,
+    "endMs": 10756,
+    "timestampMs": 10594,
+    "confidence": 1.0
+  },
+  {
+    "text": " a",
+    "startMs": 10756,
+    "endMs": 10837,
+    "timestampMs": 10756,
+    "confidence": 1.0
+  },
+  {
+    "text": " good",
+    "startMs": 10837,
+    "endMs": 11161,
+    "timestampMs": 10837,
+    "confidence": 1.0
+  },
+  {
+    "text": " change",
+    "startMs": 11161,
+    "endMs": 11648,
+    "timestampMs": 11161,
+    "confidence": 1.0
+  },
+  {
+    "text": " or",
+    "startMs": 11648,
+    "endMs": 11810,
+    "timestampMs": 11648,
+    "confidence": 1.0
+  },
+  {
+    "text": " a",
+    "startMs": 11810,
+    "endMs": 11891,
+    "timestampMs": 11810,
+    "confidence": 1.0
+  },
+  {
+    "text": " major",
+    "startMs": 11891,
+    "endMs": 12296,
+    "timestampMs": 11891,
+    "confidence": 1.0
+  },
+  {
+    "text": " mistake",
+    "startMs": 12296,
+    "endMs": 12945,
+    "timestampMs": 12296,
+    "confidence": 1.0
+  },
+  {
+    "text": " Drop",
+    "startMs": 12945,
+    "endMs": 13253,
+    "timestampMs": 12945,
+    "confidence": 1.0
+  },
+  {
+    "text": " your",
+    "startMs": 13253,
+    "endMs": 13561,
+    "timestampMs": 13253,
+    "confidence": 1.0
+  },
+  {
+    "text": " opinion",
+    "startMs": 13561,
+    "endMs": 14100,
+    "timestampMs": 13561,
+    "confidence": 1.0
+  },
+  {
+    "text": " below",
+    "startMs": 14100,
+    "endMs": 14486,
+    "timestampMs": 14100,
+    "confidence": 1.0
+  },
+  {
+    "text": " and",
+    "startMs": 14486,
+    "endMs": 14717,
+    "timestampMs": 14486,
+    "confidence": 1.0
+  },
+  {
+    "text": " subscribe",
+    "startMs": 14717,
+    "endMs": 15410,
+    "timestampMs": 14717,
+    "confidence": 1.0
+  },
+  {
+    "text": " for",
+    "startMs": 15410,
+    "endMs": 15642,
+    "timestampMs": 15410,
+    "confidence": 1.0
+  },
+  {
+    "text": " daily",
+    "startMs": 15642,
+    "endMs": 16027,
+    "timestampMs": 15642,
+    "confidence": 1.0
+  },
+  {
+    "text": " internet",
+    "startMs": 16027,
+    "endMs": 16643,
+    "timestampMs": 16027,
+    "confidence": 1.0
+  },
+  {
+    "text": " updates",
+    "startMs": 16643,
+    "endMs": 17260,
+    "timestampMs": 16643,
+    "confidence": 1.0
+  }
+]
