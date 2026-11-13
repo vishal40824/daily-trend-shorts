@@ -34,7 +34,8 @@ export const DynamicCaptions: React.FC<{ captions: Caption[] }> = ({
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       {pages.map((page, index) => {
         const nextPage = pages[index + 1] ?? null;
-        const subtitleStartFrame = Math.round((page.startMs / 1000) * fps);
+        // Start immediately at frame 0 for the first page to eliminate any delayed entrance snap
+        const subtitleStartFrame = index === 0 ? 0 : Math.round((page.startMs / 1000) * fps);
         const subtitleEndFrame = Math.round(
           Math.min(
             nextPage ? (nextPage.startMs / 1000) * fps : Infinity,
@@ -49,7 +50,7 @@ export const DynamicCaptions: React.FC<{ captions: Caption[] }> = ({
             from={subtitleStartFrame}
             durationInFrames={durationInFrames}
           >
-            <SubtitlePage page={page} />
+            <SubtitlePage isFirstPage={index === 0} page={page} />
           </Sequence>
         );
       })}

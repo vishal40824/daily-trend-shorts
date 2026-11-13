@@ -20,6 +20,7 @@ export const loadFont = async (): Promise<void> => {
 
   await font.load();
   document.fonts.add(font);
+  await document.fonts.ready;
 
   continueRender(waitForFont);
 };

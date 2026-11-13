@@ -1,13 +1,7 @@
-import { makeTransform, scale } from "@remotion/animation-utils";
 import { TikTokPage } from "@remotion/captions";
 import { fitText } from "@remotion/layout-utils";
-import React from "react";
-import {
-  AbsoluteFill,
-  interpolate,
-  useCurrentFrame,
-  useVideoConfig,
-} from "remotion";
+import React, { useMemo } from "react";
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { TheBoldFont } from "../load-font";
 
 const fontFamily = TheBoldFont;
@@ -29,27 +23,28 @@ const DESIRED_FONT_SIZE = 110;
 const HIGHLIGHT_COLOR = "#FFE600"; // High-visibility electric cyber yellow
 
 export const Page: React.FC<{
-  readonly enterProgress: number;
   readonly page: TikTokPage;
-}> = ({ enterProgress, page }) => {
+  readonly isFirstPage?: boolean;
+}> = ({ page, isFirstPage = false }) => {
   const frame = useCurrentFrame();
   const { width, fps } = useVideoConfig();
-  const timeInMs = (frame / fps) * 1000;
 
-  const fittedText = fitText({
-    fontFamily,
-    text: page.text,
-    withinWidth: width * 0.88,
-    textTransform: "uppercase",
-  });
+  // Precise absolute millisecond timing
+  const absoluteTimeMs = isFirstPage
+    ? (frame / fps) * 1000
+    : page.startMs + (frame / fps) * 1000;
+
+  // Memoize fitted text to prevent any frame-by-frame layout recalculation
+  const fittedText = useMemo(() => {
+    return fitText({
+      fontFamily,
+      text: page.text,
+      withinWidth: width * 0.88,
+      textTransform: "uppercase",
+    });
+  }, [page.text, width]);
 
   const fontSize = Math.min(DESIRED_FONT_SIZE, fittedText.fontSize);
-
-  // Rock-solid smooth micro-scale (zero Y-twitch)
-  const scaleValue = interpolate(enterProgress, [0, 1], [0.94, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
 
   return (
     <AbsoluteFill style={container}>
@@ -64,21 +59,11 @@ export const Page: React.FC<{
           letterSpacing: "2px",
           textAlign: "center",
           lineHeight: 1.15,
-          transform: makeTransform([scale(scaleValue)]),
-          transformOrigin: "center center",
-          opacity: interpolate(enterProgress, [0, 0.4, 1], [0, 1, 1], {
-            extrapolateLeft: "clamp",
-            extrapolateRight: "clamp",
-          }),
         }}
       >
         {page.tokens.map((t, index) => {
-          const startRelativeToSequence = t.fromMs - page.startMs;
-          const endRelativeToSequence = t.toMs - page.startMs;
-
           const active =
-            startRelativeToSequence <= timeInMs &&
-            endRelativeToSequence > timeInMs;
+            absoluteTimeMs >= t.fromMs && absoluteTimeMs < t.toMs;
 
           return (
             <span
