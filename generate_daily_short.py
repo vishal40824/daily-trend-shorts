@@ -43,19 +43,37 @@ def craft_script_from_topic(topic: dict):
         )
     }
 
-def run_pipeline(custom_topic: str = None, upload: bool = False):
+def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_script: str = None, upload: bool = False):
     print("=" * 60)
     print("  🚀 GENERATING DAILY INTERNET SHORT")
     print("=" * 60)
 
-    # 1. Fetch Topic
-    if custom_topic:
-        topic_data = {"title": custom_topic, "source": "CUSTOM", "score": 9999}
+    # 1. Fetch or Formulate Topic
+    if custom_script:
+        meta = {
+            "headline": custom_headline or (custom_topic.upper() if custom_topic else "BREAKING TECH NEWS"),
+            "category": "TECH DISPATCH",
+            "source": "VIRAL BREAKING",
+            "stat": "🔥 Viral #1",
+            "script": custom_script,
+            "youtube_title": f"{(custom_headline or custom_topic or 'Breaking News')[:80]} #Shorts",
+            "description": (
+                f"{custom_script}\n\n"
+                "Daily trending internet and tech stories by ByteDispatch.\n\n"
+                "🔔 Subscribe to @ByteDispatch for your daily internet briefing.\n\n"
+                "#Shorts #TechNews #Nvidia #JensenHuang #ByteDispatch"
+            )
+        }
+    elif custom_topic:
+        topic_data = {"title": custom_topic, "source": "VIRAL NEWS", "score": 9999}
+        meta = craft_script_from_topic(topic_data)
+        if custom_headline:
+            meta["headline"] = custom_headline
     else:
         topic_data = get_hottest_topic()
+        meta = craft_script_from_topic(topic_data)
 
-    meta = craft_script_from_topic(topic_data)
-    print(f"\n[1/4] Selected Topic: {meta['headline']}")
+    print(f"\n[1/4] Headline: {meta['headline']}")
     print(f"[Script]: {meta['script']}\n")
 
     # 2. Generate Audio & Word Captions
@@ -117,5 +135,17 @@ def run_pipeline(custom_topic: str = None, upload: bool = False):
     return out_video
 
 if __name__ == "__main__":
-    should_upload = "--upload" in sys.argv
-    run_pipeline(upload=should_upload)
+    import argparse
+    parser = argparse.ArgumentParser(description="ByteDispatch Daily Shorts Generator")
+    parser.add_argument("--topic", type=str, default=None, help="Custom topic topic text")
+    parser.add_argument("--headline", type=str, default=None, help="Custom visual headline (all caps)")
+    parser.add_argument("--script", type=str, default=None, help="Full custom spoken script")
+    parser.add_argument("--upload", action="store_true", help="Automatically upload to YouTube after render")
+
+    args = parser.parse_args()
+    run_pipeline(
+        custom_topic=args.topic,
+        custom_headline=args.headline,
+        custom_script=args.script,
+        upload=args.upload
+    )
