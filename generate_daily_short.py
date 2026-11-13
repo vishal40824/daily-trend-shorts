@@ -174,6 +174,7 @@ def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_s
         "pollOptionB": meta.get("pollOptionB", "YES — TOO BIG TO FAIL"),
         "pollPercentA": meta.get("pollPercentA", 74),
         "pollPercentB": meta.get("pollPercentB", 26),
+        "showAnchor": False,
     }
     props_path = os.path.join(REMOTION_DIR, "props.json")
     with open(props_path, "w", encoding="utf-8") as f:

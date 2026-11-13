@@ -600,5 +600,6 @@
   "pollOptionA": "NO \u2014 HE IS IRREPLACEABLE",
   "pollOptionB": "YES \u2014 TOO BIG TO FAIL",
   "pollPercentA": 74,
-  "pollPercentB": 26
+  "pollPercentB": 26,
+  "showAnchor": false
 }

@@ -44,6 +44,7 @@ export const trendShortSchema = z.object({
   pollOptionB: z.string().default("YES — TOO BIG TO FAIL"),
   pollPercentA: z.number().default(74),
   pollPercentB: z.number().default(26),
+  showAnchor: z.boolean().default(false),
 });
 
 export type TrendShortProps = z.infer<typeof trendShortSchema>;
@@ -89,6 +90,7 @@ export const TrendShort: React.FC<TrendShortProps> = ({
   pollOptionB = "YES — TOO BIG TO FAIL",
   pollPercentA = 74,
   pollPercentB = 26,
+  showAnchor = false,
 }) => {
   const [captions, setCaptions] = useState<Caption[]>(initialCaptions ?? []);
   const { delayRender, continueRender } = useDelayRender();
@@ -153,8 +155,8 @@ export const TrendShort: React.FC<TrendShortProps> = ({
       {/* 6. Dynamic Kinetic Subtitles */}
       <DynamicCaptions captions={captions} />
 
-      {/* 7. Funny Cartoon News Anchor (Bottom Left) */}
-      <NarratorAnchor />
+      {/* 7. Optional Cartoon News Anchor */}
+      {showAnchor && <NarratorAnchor />}
 
       {/* 8. Footer Channel Branding / Watermark */}
       <div
