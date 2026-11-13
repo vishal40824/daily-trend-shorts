@@ -21,6 +21,7 @@ import { Header } from "./Header";
 import { HeadlineCard } from "./HeadlineCard";
 import { NarratorAnchor } from "./NarratorAnchor";
 import { ProgressBar } from "./ProgressBar";
+import { TopicVisualStage } from "./TopicVisualStage";
 
 export const trendShortSchema = z.object({
   audioFile: z.string().default("audio.mp3"),
@@ -31,6 +32,18 @@ export const trendShortSchema = z.object({
   source: z.string().default("TRENDING WORLDWIDE"),
   stat: z.string().default("🔥 Hot Topic"),
   watermark: z.string().default("SUBSCRIBE TO @BYTEDISPATCH"),
+  topicImage: z.string().default("topic_image.jpg"),
+  topicTitle: z.string().default("JENSEN HUANG"),
+  topicSubtitle: z.string().default("NVIDIA FOUNDER & CEO"),
+  statChange: z.string().default("-8.4%"),
+  statLabel: z.string().default("NVIDIA (NVDA) STOCK REACTION"),
+  communityQuote: z.string().default("If Jensen leaves, Nvidia loses its entire AI moat. Nobody else commands Silicon Valley like this."),
+  communityAuthor: z.string().default("@SiliconValleyDigest"),
+  pollQuestion: z.string().default("CAN NVIDIA SURVIVE WITHOUT JENSEN?"),
+  pollOptionA: z.string().default("NO — HE IS IRREPLACEABLE"),
+  pollOptionB: z.string().default("YES — TOO BIG TO FAIL"),
+  pollPercentA: z.number().default(74),
+  pollPercentB: z.number().default(26),
 });
 
 export type TrendShortProps = z.infer<typeof trendShortSchema>;
@@ -64,6 +77,18 @@ export const TrendShort: React.FC<TrendShortProps> = ({
   source = "TRENDING WORLDWIDE",
   stat = "🔥 Hot Topic",
   watermark = "SUBSCRIBE TO @BYTEDISPATCH",
+  topicImage = "topic_image.jpg",
+  topicTitle = "JENSEN HUANG",
+  topicSubtitle = "NVIDIA FOUNDER & CEO",
+  statChange = "-8.4%",
+  statLabel = "NVIDIA (NVDA) STOCK REACTION",
+  communityQuote = "If Jensen leaves, Nvidia loses its entire AI moat. Nobody else commands Silicon Valley like this.",
+  communityAuthor = "@SiliconValleyDigest",
+  pollQuestion = "CAN NVIDIA SURVIVE WITHOUT JENSEN?",
+  pollOptionA = "NO — HE IS IRREPLACEABLE",
+  pollOptionB = "YES — TOO BIG TO FAIL",
+  pollPercentA = 74,
+  pollPercentB = 26,
 }) => {
   const [captions, setCaptions] = useState<Caption[]>(initialCaptions ?? []);
   const { delayRender, continueRender } = useDelayRender();
@@ -109,13 +134,29 @@ export const TrendShort: React.FC<TrendShortProps> = ({
       {/* 4. Glassmorphism Headline Card */}
       <HeadlineCard headline={headline} source={source} stat={stat} />
 
-      {/* 5. Dynamic Kinetic Subtitles */}
+      {/* 5. Center Topic Visual Infographic Stage */}
+      <TopicVisualStage
+        topicImage={topicImage}
+        topicTitle={topicTitle}
+        topicSubtitle={topicSubtitle}
+        statChange={statChange}
+        statLabel={statLabel}
+        communityQuote={communityQuote}
+        communityAuthor={communityAuthor}
+        pollQuestion={pollQuestion}
+        pollOptionA={pollOptionA}
+        pollOptionB={pollOptionB}
+        pollPercentA={pollPercentA}
+        pollPercentB={pollPercentB}
+      />
+
+      {/* 6. Dynamic Kinetic Subtitles */}
       <DynamicCaptions captions={captions} />
 
-      {/* 6. Funny Cartoon News Anchor (Bottom Left) */}
+      {/* 7. Funny Cartoon News Anchor (Bottom Left) */}
       <NarratorAnchor />
 
-      {/* 7. Footer Channel Branding / Watermark */}
+      {/* 8. Footer Channel Branding / Watermark */}
       <div
         style={{
           position: "absolute",
@@ -153,7 +194,7 @@ export const TrendShort: React.FC<TrendShortProps> = ({
         </div>
       </div>
 
-      {/* 7. Voiceover Audio */}
+      {/* 9. Voiceover Audio */}
       <Audio src={staticFile(audioFile)} />
     </AbsoluteFill>
   );

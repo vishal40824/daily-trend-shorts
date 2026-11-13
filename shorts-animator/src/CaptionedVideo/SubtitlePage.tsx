@@ -12,13 +12,14 @@ const SubtitlePage: React.FC<{ readonly page: TikTokPage }> = ({ page }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
+  // Smooth, non-twitchy spring entrance
   const enter = spring({
     frame,
     fps,
     config: {
-      damping: 200,
+      damping: 18,
+      stiffness: 140,
     },
-    durationInFrames: 5,
   });
 
   return (

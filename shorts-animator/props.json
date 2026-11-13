@@ -588,5 +588,17 @@
       "confidence": 1.0
     }
   ],
-  "watermark": "SUBSCRIBE TO @BYTEDISPATCH"
+  "watermark": "SUBSCRIBE TO @BYTEDISPATCH",
+  "topicImage": "topic_image.jpg",
+  "topicTitle": "JENSEN HUANG",
+  "topicSubtitle": "NVIDIA FOUNDER & CEO",
+  "statChange": "-8.4%",
+  "statLabel": "NVIDIA (NVDA) STOCK REACTION",
+  "communityQuote": "If Jensen leaves, Nvidia loses its entire AI moat. Nobody else commands Silicon Valley like this.",
+  "communityAuthor": "@SiliconValleyDigest",
+  "pollQuestion": "CAN NVIDIA SURVIVE WITHOUT JENSEN?",
+  "pollOptionA": "NO \u2014 HE IS IRREPLACEABLE",
+  "pollOptionB": "YES \u2014 TOO BIG TO FAIL",
+  "pollPercentA": 74,
+  "pollPercentB": 26
 }

@@ -34,12 +34,14 @@ export const DynamicCaptions: React.FC<{ captions: Caption[] }> = ({
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       {pages.map((page, index) => {
         const nextPage = pages[index + 1] ?? null;
-        const subtitleStartFrame = (page.startMs / 1000) * fps;
-        const subtitleEndFrame = Math.min(
-          nextPage ? (nextPage.startMs / 1000) * fps : Infinity,
-          subtitleStartFrame + (SWITCH_CAPTIONS_EVERY_MS / 1000) * fps * 1.5,
+        const subtitleStartFrame = Math.round((page.startMs / 1000) * fps);
+        const subtitleEndFrame = Math.round(
+          Math.min(
+            nextPage ? (nextPage.startMs / 1000) * fps : Infinity,
+            subtitleStartFrame + (SWITCH_CAPTIONS_EVERY_MS / 1000) * fps * 1.5,
+          )
         );
-        const durationInFrames = Math.max(1, Math.floor(subtitleEndFrame - subtitleStartFrame));
+        const durationInFrames = Math.max(1, subtitleEndFrame - subtitleStartFrame);
 
         return (
           <Sequence

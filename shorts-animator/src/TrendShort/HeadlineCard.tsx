@@ -38,7 +38,7 @@ export const HeadlineCard: React.FC<HeadlineCardProps> = ({
     <div
       style={{
         position: "absolute",
-        top: 250,
+        top: 200,
         left: 60,
         right: 60,
         zIndex: 40,
@@ -51,13 +51,13 @@ export const HeadlineCard: React.FC<HeadlineCardProps> = ({
           background: "linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03))",
           backdropFilter: "blur(24px)",
           WebkitBackdropFilter: "blur(24px)",
-          borderRadius: 36,
+          borderRadius: 30,
           border: "2px solid rgba(255, 255, 255, 0.18)",
-          padding: "48px 40px",
+          padding: "26px 36px",
           boxShadow: "0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
           display: "flex",
           flexDirection: "column",
-          gap: 24,
+          gap: 16,
         }}
       >
         {/* Source & Stat Pill */}
@@ -71,7 +71,7 @@ export const HeadlineCard: React.FC<HeadlineCardProps> = ({
           <span
             style={{
               fontFamily: "system-ui, -apple-system, sans-serif",
-              fontSize: 24,
+              fontSize: 22,
               fontWeight: 700,
               color: "#38BDF8",
               letterSpacing: "2px",
@@ -83,11 +83,11 @@ export const HeadlineCard: React.FC<HeadlineCardProps> = ({
           <span
             style={{
               fontFamily: "system-ui, -apple-system, sans-serif",
-              fontSize: 22,
+              fontSize: 20,
               fontWeight: 600,
               color: "#FCD34D",
               backgroundColor: "rgba(252, 211, 77, 0.15)",
-              padding: "6px 16px",
+              padding: "5px 14px",
               borderRadius: 9999,
               border: "1px solid rgba(252, 211, 77, 0.3)",
             }}
@@ -100,7 +100,7 @@ export const HeadlineCard: React.FC<HeadlineCardProps> = ({
         <div
           style={{
             fontFamily: TheBoldFont,
-            fontSize: 64,
+            fontSize: 48,
             fontWeight: 900,
             lineHeight: 1.15,
             color: "#FFFFFF",
