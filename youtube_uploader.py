@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import time
 import datetime
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
@@ -47,8 +48,7 @@ def upload_short(
     scheduled_time_iso: str = None  # e.g., '2026-11-13T19:00:00.000Z'
 ):
     """
-    Uploads a video to YouTube as a Short.
-    If scheduled_time_iso is provided, video is set to private until the publish timestamp.
+    Uploads a video to YouTube as a Short with real-time progress chunking.
     """
     if not os.path.exists(video_path):
         raise FileNotFoundError(f"Video file not found at: {video_path}")
@@ -56,7 +56,7 @@ def upload_short(
     youtube = get_authenticated_service()
 
     if tags is None:
-        tags = ["Shorts", "Trending", "TechNews", "Viral"]
+        tags = ["Shorts", "Trending", "TechNews", "Viral", "ByteDispatch"]
 
     # Ensure title contains #Shorts for automatic indexing
     if "#Shorts" not in title and "#shorts" not in title:
@@ -70,7 +70,7 @@ def upload_short(
             "categoryId": "28"  # Science & Technology
         },
         "status": {
-            "privacyStatus": "private" if scheduled_time_iso else privacy_status,
+            "privacyStatus": "private" if scheduled_time_iso else privacy_status.lower(),
             "selfDeclaredMadeForKids": False,
         }
     }
@@ -79,19 +79,63 @@ def upload_short(
         body["status"]["publishAt"] = scheduled_time_iso
         body["status"]["privacyStatus"] = "private"
 
-    media = MediaFileUpload(video_path, chunksize=-1, resumable=True, mimetype="video/mp4")
+    file_size = os.path.getsize(video_path)
+    file_size_mb = file_size / (1024 * 1024)
+
+    # 1MB chunk size (must be multiple of 256KB) for real-time progress updates
+    chunk_size = 1024 * 1024
+    media = MediaFileUpload(video_path, chunksize=chunk_size, resumable=True, mimetype="video/mp4")
     request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
 
-    print(f"[YouTubeUploader] Uploading '{video_path}' to YouTube...")
+    print(f"\n[YouTubeUploader] 📡 Starting upload: '{os.path.basename(video_path)}' ({file_size_mb:.1f} MB)")
+    print(f"[YouTubeUploader] 🔒 Privacy Mode: {privacy_status.upper()}")
+    print(f"[YouTubeUploader] 📝 Title: {title}\n")
+
+    start_time = time.time()
     response = None
+    last_printed_pct = -1
+
     while response is None:
         status, response = request.next_chunk()
         if status:
-            print(f"[YouTubeUploader] Upload progress: {int(status.progress() * 100)}%")
+            progress = status.progress()
+            pct = int(progress * 100)
+            bytes_sent = int(progress * file_size)
+            mb_sent = bytes_sent / (1024 * 1024)
+            elapsed = time.time() - start_time
+            speed = mb_sent / elapsed if elapsed > 0 else 0
+            bar_len = 25
+            filled = int(bar_len * progress)
+            bar = "=" * filled + (">" if filled < bar_len else "") + " " * (bar_len - filled - (1 if filled < bar_len else 0))
+            sys.stdout.write(f"\r[YouTubeUploader] 🚀 [{bar}] {progress * 100:5.1f}% ({mb_sent:4.1f}/{file_size_mb:4.1f} MB) @ {speed:3.1f} MB/s ")
+            sys.stdout.flush()
+
+    sys.stdout.write(f"\r[YouTubeUploader] 🚀 [{'=' * 25}] 100.0% ({file_size_mb:4.1f}/{file_size_mb:4.1f} MB) — Finalizing upload!           \n\n")
+    sys.stdout.flush()
 
     video_id = response.get("id")
     video_url = f"https://www.youtube.com/shorts/{video_id}"
-    print(f"[YouTubeUploader] Successfully uploaded! Video URL: {video_url}")
+    watch_url = f"https://www.youtube.com/watch?v={video_id}"
+    studio_url = f"https://studio.youtube.com/video/{video_id}/edit"
+
+    print("=" * 64)
+    print(f"  🎉 UPLOAD SUCCESSFUL & PROCESSED BY YOUTUBE!")
+    print("=" * 64)
+    print(f"🎬 Video ID:      {video_id}")
+    print(f"🔗 Direct Shorts: {video_url}")
+    print(f"📺 Watch URL:     {watch_url}")
+    print(f"⚙️ Studio Editor: {studio_url}")
+    print("=" * 64)
+    if privacy_status.lower() == "unlisted":
+        print("💡 NOTE ON UNLISTED VIDEOS:")
+        print("   • Unlisted videos do NOT show on your public channel page.")
+        print("   • Anyone with the link above can view it.")
+        print("   • You can also change it to 'Public' anytime from YouTube Studio.")
+    elif privacy_status.lower() == "public":
+        print("🌟 NOTE ON PUBLIC VIDEOS:")
+        print("   • Video is live! YouTube algorithm will index it into the Shorts feed.")
+    print("=" * 64 + "\n")
+
     return video_url
 
 if __name__ == "__main__":
@@ -99,11 +143,8 @@ if __name__ == "__main__":
         print(f"[Notice] '{CLIENT_SECRETS_FILE}' is required for automated YouTube uploads.")
     else:
         print("[YouTubeUploader] Client secrets detected and ready.")
-        print("[YouTubeUploader] Authenticating with YouTube...")
         try:
             service = get_authenticated_service()
-            print("[YouTubeUploader] ✅ Authentication SUCCESSFUL! token.json saved.")
-            print("[YouTubeUploader] Your automated YouTube Shorts pipeline is 100% connected and ready!")
+            print("[YouTubeUploader] ✅ Authentication SUCCESSFUL! token.json active.")
         except Exception as e:
-            print(f"[YouTubeUploader] ❌ Authentication error: {e}")
-            print("\n💡 TIP: In Google Cloud Console, make sure you went to 'OAuth consent screen' -> 'Test users' and added your email 'bytedispatch.media@gmail.com'.")
+            print(f"[YouTubeUploader] ❌ Auth error: {e}")

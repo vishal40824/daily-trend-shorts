@@ -17,7 +17,10 @@ def upload_latest_video(privacy_status="public"):
     # Pick the most recently modified video
     latest_video = max(mp4_files, key=os.path.getmtime)
     filename = os.path.basename(latest_video)
-    print(f"🎬 Found latest video: {filename}")
+    print("=" * 64)
+    print(f"🎬 SELECTED LATEST VIDEO: {filename}")
+    print(f"🔒 TARGET PRIVACY MODE:   {privacy_status.upper()}")
+    print("=" * 64)
 
     # Generate a punchy default title from filename or story
     title = "The Internet is Losing Its Mind Over This #Shorts"
@@ -33,7 +36,6 @@ def upload_latest_video(privacy_status="public"):
 
     tags = ["Shorts", "TechNews", "InternetTrends", "ByteDispatch", "Trending", "BreakingNews"]
 
-    print(f"🚀 Uploading '{filename}' to YouTube as '{privacy_status}'...")
     url = upload_short(
         video_path=latest_video,
         title=title,
@@ -41,9 +43,13 @@ def upload_latest_video(privacy_status="public"):
         tags=tags,
         privacy_status=privacy_status
     )
-    print(f"\n🎉 DONE! View your Short live at:\n{url}")
     return url
 
 if __name__ == "__main__":
-    privacy = "unlisted" if "--unlisted" in sys.argv else "public"
+    if "--unlisted" in sys.argv:
+        privacy = "unlisted"
+    elif "--private" in sys.argv:
+        privacy = "private"
+    else:
+        privacy = "public"
     upload_latest_video(privacy_status=privacy)
