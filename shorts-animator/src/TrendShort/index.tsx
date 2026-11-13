@@ -29,7 +29,7 @@ export const trendShortSchema = z.object({
   category: z.string().default("VIRAL TECH STORY"),
   source: z.string().default("TRENDING WORLDWIDE"),
   stat: z.string().default("🔥 Hot Topic"),
-  watermark: z.string().default("SUBSCRIBE FOR DAILY TRENDS"),
+  watermark: z.string().default("SUBSCRIBE TO @BYTEDISPATCH"),
 });
 
 export type TrendShortProps = z.infer<typeof trendShortSchema>;
@@ -62,7 +62,7 @@ export const TrendShort: React.FC<TrendShortProps> = ({
   category = "VIRAL TECH STORY",
   source = "TRENDING WORLDWIDE",
   stat = "🔥 Hot Topic",
-  watermark = "SUBSCRIBE FOR DAILY TRENDS",
+  watermark = "SUBSCRIBE TO @BYTEDISPATCH",
 }) => {
   const [captions, setCaptions] = useState<Caption[]>(initialCaptions ?? []);
   const { delayRender, continueRender } = useDelayRender();

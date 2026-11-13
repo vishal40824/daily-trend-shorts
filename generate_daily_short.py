@@ -25,7 +25,7 @@ def craft_script_from_topic(topic: dict):
         f"{raw_title}. "
         f"This development is creating serious debate across the tech community. "
         f"Do you think this is a good change or a major mistake? "
-        f"Drop your opinion below and subscribe for daily internet updates."
+        f"Drop your thoughts below and subscribe to ByteDispatch for daily internet updates."
     )
 
     return {
@@ -35,7 +35,12 @@ def craft_script_from_topic(topic: dict):
         "stat": f"🔥 {topic.get('score', 'Top')} Upvotes",
         "script": script,
         "youtube_title": f"{raw_title[:80]} #Shorts",
-        "description": f"{raw_title}\n\nDaily trending internet stories.\n\n#Shorts #TechNews #InternetTrends"
+        "description": (
+            f"{raw_title}\n\n"
+            f"Daily trending internet and tech stories by ByteDispatch.\n\n"
+            f"🔔 Subscribe to @ByteDispatch for your daily internet briefing.\n\n"
+            f"#Shorts #TechNews #InternetTrends #ByteDispatch"
+        )
     }
 
 def run_pipeline(custom_topic: str = None, upload: bool = False):
@@ -70,7 +75,7 @@ def run_pipeline(custom_topic: str = None, upload: bool = False):
         "audioFile": "audio.mp3",
         "captionsFile": "audio.json",
         "captions": captions,
-        "watermark": "SUBSCRIBE FOR DAILY TRENDS"
+        "watermark": "SUBSCRIBE TO @BYTEDISPATCH"
     }
     props_path = os.path.join(REMOTION_DIR, "props.json")
     with open(props_path, "w", encoding="utf-8") as f:
