@@ -20,9 +20,9 @@ def upload_latest_video(privacy_status="public"):
     print(f"🎬 Found latest video: {filename}")
 
     # Generate a punchy default title from filename or story
-    title = "The Internet is Losing Its Mind Over This"
+    title = "The Internet is Losing Its Mind Over This #Shorts"
     if "Jensen" in filename or "Short_" in filename:
-        title = "Jensen Huang Resigns - What Actually Happened?"
+        title = "Jensen Huang Forced Out of Nvidia? What Really Happened #Shorts"
 
     description = (
         f"{title}\n\n"
