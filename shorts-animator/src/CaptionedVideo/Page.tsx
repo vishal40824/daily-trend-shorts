@@ -16,8 +16,8 @@ const container: React.CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   top: undefined,
-  bottom: 350,
-  height: 150,
+  bottom: 540,
+  height: 180,
 };
 
 const DESIRED_FONT_SIZE = 120;

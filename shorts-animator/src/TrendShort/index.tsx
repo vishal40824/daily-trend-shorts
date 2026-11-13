@@ -19,6 +19,7 @@ import { Background } from "./Background";
 import { DynamicCaptions } from "./DynamicCaptions";
 import { Header } from "./Header";
 import { HeadlineCard } from "./HeadlineCard";
+import { NarratorAnchor } from "./NarratorAnchor";
 import { ProgressBar } from "./ProgressBar";
 
 export const trendShortSchema = z.object({
@@ -111,7 +112,10 @@ export const TrendShort: React.FC<TrendShortProps> = ({
       {/* 5. Dynamic Kinetic Subtitles */}
       <DynamicCaptions captions={captions} />
 
-      {/* 6. Footer Channel Branding / Watermark */}
+      {/* 6. Funny Cartoon News Anchor (Bottom Left) */}
+      <NarratorAnchor />
+
+      {/* 7. Footer Channel Branding / Watermark */}
       <div
         style={{
           position: "absolute",
