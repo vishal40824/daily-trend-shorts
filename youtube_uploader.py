@@ -99,3 +99,11 @@ if __name__ == "__main__":
         print(f"[Notice] '{CLIENT_SECRETS_FILE}' is required for automated YouTube uploads.")
     else:
         print("[YouTubeUploader] Client secrets detected and ready.")
+        print("[YouTubeUploader] Authenticating with YouTube...")
+        try:
+            service = get_authenticated_service()
+            print("[YouTubeUploader] ✅ Authentication SUCCESSFUL! token.json saved.")
+            print("[YouTubeUploader] Your automated YouTube Shorts pipeline is 100% connected and ready!")
+        except Exception as e:
+            print(f"[YouTubeUploader] ❌ Authentication error: {e}")
+            print("\n💡 TIP: In Google Cloud Console, make sure you went to 'OAuth consent screen' -> 'Test users' and added your email 'bytedispatch.media@gmail.com'.")
