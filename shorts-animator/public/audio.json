@@ -1,583 +1,450 @@
 [
   {
-    "text": "Is",
+    "text": "The",
     "startMs": 100,
-    "endMs": 265,
+    "endMs": 343,
     "timestampMs": 100,
     "confidence": 1.0
   },
   {
-    "text": " Jensen",
-    "startMs": 265,
-    "endMs": 760,
-    "timestampMs": 265,
+    "text": " internet",
+    "startMs": 343,
+    "endMs": 992,
+    "timestampMs": 343,
     "confidence": 1.0
   },
   {
-    "text": " Huang",
-    "startMs": 760,
-    "endMs": 1172,
-    "timestampMs": 760,
+    "text": " is",
+    "startMs": 992,
+    "endMs": 1154,
+    "timestampMs": 992,
     "confidence": 1.0
   },
   {
-    "text": " actually",
-    "startMs": 1172,
-    "endMs": 1831,
-    "timestampMs": 1172,
+    "text": " exploding",
+    "startMs": 1154,
+    "endMs": 1884,
+    "timestampMs": 1154,
     "confidence": 1.0
   },
   {
-    "text": " being",
-    "startMs": 1831,
-    "endMs": 2244,
-    "timestampMs": 1831,
-    "confidence": 1.0
-  },
-  {
-    "text": " forced",
-    "startMs": 2244,
-    "endMs": 2738,
-    "timestampMs": 2244,
-    "confidence": 1.0
-  },
-  {
-    "text": " out",
-    "startMs": 2738,
-    "endMs": 2986,
-    "timestampMs": 2738,
-    "confidence": 1.0
-  },
-  {
-    "text": " of",
-    "startMs": 2986,
-    "endMs": 3151,
-    "timestampMs": 2986,
-    "confidence": 1.0
-  },
-  {
-    "text": " Nvidia",
-    "startMs": 3151,
-    "endMs": 3728,
-    "timestampMs": 3151,
-    "confidence": 1.0
-  },
-  {
-    "text": " The",
-    "startMs": 3678,
-    "endMs": 3940,
-    "timestampMs": 3678,
-    "confidence": 1.0
-  },
-  {
-    "text": " entire",
-    "startMs": 3940,
-    "endMs": 4464,
-    "timestampMs": 3940,
-    "confidence": 1.0
-  },
-  {
-    "text": " tech",
-    "startMs": 4464,
-    "endMs": 4814,
-    "timestampMs": 4464,
-    "confidence": 1.0
-  },
-  {
-    "text": " world",
-    "startMs": 4814,
-    "endMs": 5250,
-    "timestampMs": 4814,
-    "confidence": 1.0
-  },
-  {
-    "text": " was",
-    "startMs": 5250,
-    "endMs": 5512,
-    "timestampMs": 5250,
-    "confidence": 1.0
-  },
-  {
-    "text": " just",
-    "startMs": 5512,
-    "endMs": 5862,
-    "timestampMs": 5512,
-    "confidence": 1.0
-  },
-  {
-    "text": " thrown",
-    "startMs": 5862,
-    "endMs": 6386,
-    "timestampMs": 5862,
-    "confidence": 1.0
-  },
-  {
-    "text": " into",
-    "startMs": 6386,
-    "endMs": 6735,
-    "timestampMs": 6386,
-    "confidence": 1.0
-  },
-  {
-    "text": " chaos",
-    "startMs": 6735,
-    "endMs": 7260,
-    "timestampMs": 6735,
-    "confidence": 1.0
-  },
-  {
-    "text": " Viral",
-    "startMs": 7260,
-    "endMs": 7611,
-    "timestampMs": 7260,
-    "confidence": 1.0
-  },
-  {
-    "text": " reports",
-    "startMs": 7611,
-    "endMs": 8104,
-    "timestampMs": 7611,
-    "confidence": 1.0
-  },
-  {
-    "text": " erupted",
-    "startMs": 8104,
-    "endMs": 8596,
-    "timestampMs": 8104,
-    "confidence": 1.0
-  },
-  {
-    "text": " across",
-    "startMs": 8596,
-    "endMs": 9018,
-    "timestampMs": 8596,
-    "confidence": 1.0
-  },
-  {
-    "text": " Hacker",
-    "startMs": 9018,
-    "endMs": 9440,
-    "timestampMs": 9018,
-    "confidence": 1.0
-  },
-  {
-    "text": " News",
-    "startMs": 9440,
-    "endMs": 9721,
-    "timestampMs": 9440,
-    "confidence": 1.0
-  },
-  {
-    "text": " claiming",
-    "startMs": 9721,
-    "endMs": 10284,
-    "timestampMs": 9721,
-    "confidence": 1.0
-  },
-  {
-    "text": " Nvidia's",
-    "startMs": 10284,
-    "endMs": 10846,
-    "timestampMs": 10284,
-    "confidence": 1.0
-  },
-  {
-    "text": " board",
-    "startMs": 10846,
-    "endMs": 11198,
-    "timestampMs": 10846,
-    "confidence": 1.0
-  },
-  {
-    "text": " held",
-    "startMs": 11198,
-    "endMs": 11479,
-    "timestampMs": 11198,
-    "confidence": 1.0
-  },
-  {
-    "text": " a",
-    "startMs": 11479,
-    "endMs": 11549,
-    "timestampMs": 11479,
-    "confidence": 1.0
-  },
-  {
-    "text": " secret",
-    "startMs": 11549,
-    "endMs": 11971,
-    "timestampMs": 11549,
-    "confidence": 1.0
-  },
-  {
-    "text": " emergency",
-    "startMs": 11971,
-    "endMs": 12604,
-    "timestampMs": 11971,
-    "confidence": 1.0
-  },
-  {
-    "text": " meeting",
-    "startMs": 12604,
-    "endMs": 13097,
-    "timestampMs": 12604,
-    "confidence": 1.0
-  },
-  {
-    "text": " to",
-    "startMs": 13097,
-    "endMs": 13237,
-    "timestampMs": 13097,
-    "confidence": 1.0
-  },
-  {
-    "text": " replace",
-    "startMs": 13237,
-    "endMs": 13730,
-    "timestampMs": 13237,
-    "confidence": 1.0
-  },
-  {
-    "text": " the",
-    "startMs": 13730,
-    "endMs": 13941,
-    "timestampMs": 13730,
-    "confidence": 1.0
-  },
-  {
-    "text": " billionaire",
-    "startMs": 13941,
-    "endMs": 14714,
-    "timestampMs": 13941,
-    "confidence": 1.0
-  },
-  {
-    "text": " CEO",
-    "startMs": 14714,
-    "endMs": 14925,
-    "timestampMs": 14714,
-    "confidence": 1.0
-  },
-  {
-    "text": " following",
-    "startMs": 14925,
-    "endMs": 15558,
-    "timestampMs": 14925,
-    "confidence": 1.0
-  },
-  {
-    "text": " massive",
-    "startMs": 15558,
-    "endMs": 16050,
-    "timestampMs": 15558,
-    "confidence": 1.0
-  },
-  {
-    "text": " antitrust",
-    "startMs": 16050,
-    "endMs": 16683,
-    "timestampMs": 16050,
-    "confidence": 1.0
-  },
-  {
-    "text": " probes",
-    "startMs": 16683,
-    "endMs": 17175,
-    "timestampMs": 16683,
-    "confidence": 1.0
-  },
-  {
-    "text": " While",
-    "startMs": 17175,
-    "endMs": 17540,
-    "timestampMs": 17175,
-    "confidence": 1.0
-  },
-  {
-    "text": " analysts",
-    "startMs": 17540,
-    "endMs": 18124,
-    "timestampMs": 17540,
-    "confidence": 1.0
-  },
-  {
-    "text": " debate",
-    "startMs": 18124,
-    "endMs": 18561,
-    "timestampMs": 18124,
-    "confidence": 1.0
-  },
-  {
-    "text": " if",
-    "startMs": 18561,
-    "endMs": 18707,
-    "timestampMs": 18561,
+    "text": " over",
+    "startMs": 1884,
+    "endMs": 2208,
+    "timestampMs": 1884,
     "confidence": 1.0
   },
   {
     "text": " this",
-    "startMs": 18707,
-    "endMs": 18999,
-    "timestampMs": 18707,
+    "startMs": 2208,
+    "endMs": 2532,
+    "timestampMs": 2208,
+    "confidence": 1.0
+  },
+  {
+    "text": " today",
+    "startMs": 2532,
+    "endMs": 3019,
+    "timestampMs": 2532,
+    "confidence": 1.0
+  },
+  {
+    "text": " Universal",
+    "startMs": 2969,
+    "endMs": 3733,
+    "timestampMs": 2969,
+    "confidence": 1.0
+  },
+  {
+    "text": " XSS",
+    "startMs": 3733,
+    "endMs": 3988,
+    "timestampMs": 3733,
+    "confidence": 1.0
+  },
+  {
+    "text": " in",
+    "startMs": 3988,
+    "endMs": 4158,
+    "timestampMs": 3988,
+    "confidence": 1.0
+  },
+  {
+    "text": " uBlock",
+    "startMs": 4158,
+    "endMs": 4668,
+    "timestampMs": 4158,
+    "confidence": 1.0
+  },
+  {
+    "text": " Origin",
+    "startMs": 4668,
+    "endMs": 5178,
+    "timestampMs": 4668,
+    "confidence": 1.0
+  },
+  {
+    "text": " from",
+    "startMs": 5178,
+    "endMs": 5518,
+    "timestampMs": 5178,
+    "confidence": 1.0
+  },
+  {
+    "text": " websitedriven",
+    "startMs": 5518,
+    "endMs": 6707,
+    "timestampMs": 5518,
+    "confidence": 1.0
+  },
+  {
+    "text": " element",
+    "startMs": 6707,
+    "endMs": 7302,
+    "timestampMs": 6707,
+    "confidence": 1.0
+  },
+  {
+    "text": " picker",
+    "startMs": 7302,
+    "endMs": 7897,
+    "timestampMs": 7302,
+    "confidence": 1.0
+  },
+  {
+    "text": " This",
+    "startMs": 7897,
+    "endMs": 8173,
+    "timestampMs": 7897,
+    "confidence": 1.0
+  },
+  {
+    "text": " development",
+    "startMs": 8173,
+    "endMs": 8934,
+    "timestampMs": 8173,
     "confidence": 1.0
   },
   {
     "text": " is",
-    "startMs": 18999,
-    "endMs": 19145,
-    "timestampMs": 18999,
+    "startMs": 8934,
+    "endMs": 9072,
+    "timestampMs": 8934,
     "confidence": 1.0
   },
   {
-    "text": " an",
-    "startMs": 19145,
-    "endMs": 19291,
-    "timestampMs": 19145,
+    "text": " creating",
+    "startMs": 9072,
+    "endMs": 9625,
+    "timestampMs": 9072,
     "confidence": 1.0
   },
   {
-    "text": " elaborate",
-    "startMs": 19291,
-    "endMs": 19947,
-    "timestampMs": 19291,
+    "text": " intense",
+    "startMs": 9625,
+    "endMs": 10109,
+    "timestampMs": 9625,
     "confidence": 1.0
   },
   {
-    "text": " hoax",
-    "startMs": 19947,
-    "endMs": 20239,
-    "timestampMs": 19947,
+    "text": " debate",
+    "startMs": 10109,
+    "endMs": 10524,
+    "timestampMs": 10109,
     "confidence": 1.0
   },
   {
-    "text": " or",
-    "startMs": 20239,
-    "endMs": 20385,
-    "timestampMs": 20239,
+    "text": " across",
+    "startMs": 10524,
+    "endMs": 10939,
+    "timestampMs": 10524,
     "confidence": 1.0
   },
   {
-    "text": " an",
-    "startMs": 20385,
-    "endMs": 20531,
-    "timestampMs": 20385,
+    "text": " Silicon",
+    "startMs": 10939,
+    "endMs": 11423,
+    "timestampMs": 10939,
     "confidence": 1.0
   },
   {
-    "text": " unprecedented",
-    "startMs": 20531,
-    "endMs": 21479,
-    "timestampMs": 20531,
-    "confidence": 1.0
-  },
-  {
-    "text": " boardroom",
-    "startMs": 21479,
-    "endMs": 22135,
-    "timestampMs": 21479,
-    "confidence": 1.0
-  },
-  {
-    "text": " coup",
-    "startMs": 22135,
-    "endMs": 22500,
-    "timestampMs": 22135,
-    "confidence": 1.0
-  },
-  {
-    "text": " Nvidia",
-    "startMs": 22500,
-    "endMs": 22938,
-    "timestampMs": 22500,
-    "confidence": 1.0
-  },
-  {
-    "text": " stock",
-    "startMs": 22938,
-    "endMs": 23302,
-    "timestampMs": 22938,
-    "confidence": 1.0
-  },
-  {
-    "text": " is",
-    "startMs": 23302,
-    "endMs": 23448,
-    "timestampMs": 23302,
-    "confidence": 1.0
-  },
-  {
-    "text": " already",
-    "startMs": 23448,
-    "endMs": 23959,
-    "timestampMs": 23448,
-    "confidence": 1.0
-  },
-  {
-    "text": " reacting",
-    "startMs": 23959,
-    "endMs": 24615,
-    "timestampMs": 23959,
-    "confidence": 1.0
-  },
-  {
-    "text": " Could",
-    "startMs": 24615,
-    "endMs": 24984,
-    "timestampMs": 24615,
-    "confidence": 1.0
-  },
-  {
-    "text": " the",
-    "startMs": 24984,
-    "endMs": 25206,
-    "timestampMs": 24984,
-    "confidence": 1.0
-  },
-  {
-    "text": " AI",
-    "startMs": 25206,
-    "endMs": 25353,
-    "timestampMs": 25206,
-    "confidence": 1.0
-  },
-  {
-    "text": " giant",
-    "startMs": 25353,
-    "endMs": 25722,
-    "timestampMs": 25353,
-    "confidence": 1.0
-  },
-  {
-    "text": " ever",
-    "startMs": 25722,
-    "endMs": 26018,
-    "timestampMs": 25722,
-    "confidence": 1.0
-  },
-  {
-    "text": " survive",
-    "startMs": 26018,
-    "endMs": 26534,
-    "timestampMs": 26018,
-    "confidence": 1.0
-  },
-  {
-    "text": " without",
-    "startMs": 26534,
-    "endMs": 27051,
-    "timestampMs": 26534,
-    "confidence": 1.0
-  },
-  {
-    "text": " its",
-    "startMs": 27051,
-    "endMs": 27272,
-    "timestampMs": 27051,
-    "confidence": 1.0
-  },
-  {
-    "text": " iconic",
-    "startMs": 27272,
-    "endMs": 27715,
-    "timestampMs": 27272,
-    "confidence": 1.0
-  },
-  {
-    "text": " leatherjacket",
-    "startMs": 27715,
-    "endMs": 28748,
-    "timestampMs": 27715,
-    "confidence": 1.0
-  },
-  {
-    "text": " founder",
-    "startMs": 28748,
-    "endMs": 29339,
-    "timestampMs": 28748,
-    "confidence": 1.0
-  },
-  {
-    "text": " Drop",
-    "startMs": 29339,
-    "endMs": 29633,
-    "timestampMs": 29339,
-    "confidence": 1.0
-  },
-  {
-    "text": " your",
-    "startMs": 29633,
-    "endMs": 29927,
-    "timestampMs": 29633,
-    "confidence": 1.0
-  },
-  {
-    "text": " thoughts",
-    "startMs": 29927,
-    "endMs": 30516,
-    "timestampMs": 29927,
-    "confidence": 1.0
-  },
-  {
-    "text": " below",
-    "startMs": 30516,
-    "endMs": 30884,
-    "timestampMs": 30516,
+    "text": " Valley",
+    "startMs": 11423,
+    "endMs": 11838,
+    "timestampMs": 11423,
     "confidence": 1.0
   },
   {
     "text": " and",
-    "startMs": 30884,
-    "endMs": 31104,
-    "timestampMs": 30884,
+    "startMs": 11838,
+    "endMs": 12046,
+    "timestampMs": 11838,
     "confidence": 1.0
   },
   {
-    "text": " subscribe",
-    "startMs": 31104,
-    "endMs": 31766,
-    "timestampMs": 31104,
-    "confidence": 1.0
-  },
-  {
-    "text": " to",
-    "startMs": 31766,
-    "endMs": 31913,
-    "timestampMs": 31766,
-    "confidence": 1.0
-  },
-  {
-    "text": " ByteDispatch",
-    "startMs": 31913,
-    "endMs": 32796,
-    "timestampMs": 31913,
-    "confidence": 1.0
-  },
-  {
-    "text": " for",
-    "startMs": 32796,
-    "endMs": 33016,
-    "timestampMs": 32796,
-    "confidence": 1.0
-  },
-  {
-    "text": " daily",
-    "startMs": 33016,
-    "endMs": 33384,
-    "timestampMs": 33016,
+    "text": " the",
+    "startMs": 12046,
+    "endMs": 12253,
+    "timestampMs": 12046,
     "confidence": 1.0
   },
   {
     "text": " tech",
-    "startMs": 33384,
-    "endMs": 33678,
-    "timestampMs": 33384,
+    "startMs": 12253,
+    "endMs": 12530,
+    "timestampMs": 12253,
+    "confidence": 1.0
+  },
+  {
+    "text": " world",
+    "startMs": 12530,
+    "endMs": 12945,
+    "timestampMs": 12530,
+    "confidence": 1.0
+  },
+  {
+    "text": " Analysts",
+    "startMs": 12945,
+    "endMs": 13518,
+    "timestampMs": 12945,
+    "confidence": 1.0
+  },
+  {
+    "text": " are",
+    "startMs": 13518,
+    "endMs": 13733,
+    "timestampMs": 13518,
+    "confidence": 1.0
+  },
+  {
+    "text": " calling",
+    "startMs": 13733,
+    "endMs": 14235,
+    "timestampMs": 13733,
+    "confidence": 1.0
+  },
+  {
+    "text": " this",
+    "startMs": 14235,
+    "endMs": 14522,
+    "timestampMs": 14235,
+    "confidence": 1.0
+  },
+  {
+    "text": " a",
+    "startMs": 14522,
+    "endMs": 14594,
+    "timestampMs": 14522,
+    "confidence": 1.0
+  },
+  {
+    "text": " defining",
+    "startMs": 14594,
+    "endMs": 15167,
+    "timestampMs": 14594,
+    "confidence": 1.0
+  },
+  {
+    "text": " moment",
+    "startMs": 15167,
+    "endMs": 15598,
+    "timestampMs": 15167,
+    "confidence": 1.0
+  },
+  {
+    "text": " for",
+    "startMs": 15598,
+    "endMs": 15813,
+    "timestampMs": 15598,
+    "confidence": 1.0
+  },
+  {
+    "text": " the",
+    "startMs": 15813,
+    "endMs": 16028,
+    "timestampMs": 15813,
+    "confidence": 1.0
+  },
+  {
+    "text": " entire",
+    "startMs": 16028,
+    "endMs": 16458,
+    "timestampMs": 16028,
+    "confidence": 1.0
+  },
+  {
+    "text": " industry",
+    "startMs": 16458,
+    "endMs": 17103,
+    "timestampMs": 16458,
+    "confidence": 1.0
+  },
+  {
+    "text": " Do",
+    "startMs": 17103,
+    "endMs": 17259,
+    "timestampMs": 17103,
+    "confidence": 1.0
+  },
+  {
+    "text": " you",
+    "startMs": 17259,
+    "endMs": 17491,
+    "timestampMs": 17259,
+    "confidence": 1.0
+  },
+  {
+    "text": " think",
+    "startMs": 17491,
+    "endMs": 17879,
+    "timestampMs": 17491,
+    "confidence": 1.0
+  },
+  {
+    "text": " this",
+    "startMs": 17879,
+    "endMs": 18189,
+    "timestampMs": 17879,
+    "confidence": 1.0
+  },
+  {
+    "text": " is",
+    "startMs": 18189,
+    "endMs": 18345,
+    "timestampMs": 18189,
+    "confidence": 1.0
+  },
+  {
+    "text": " a",
+    "startMs": 18345,
+    "endMs": 18422,
+    "timestampMs": 18345,
+    "confidence": 1.0
+  },
+  {
+    "text": " major",
+    "startMs": 18422,
+    "endMs": 18810,
+    "timestampMs": 18422,
+    "confidence": 1.0
+  },
+  {
+    "text": " misstep",
+    "startMs": 18810,
+    "endMs": 19353,
+    "timestampMs": 18810,
+    "confidence": 1.0
+  },
+  {
+    "text": " or",
+    "startMs": 19353,
+    "endMs": 19508,
+    "timestampMs": 19353,
+    "confidence": 1.0
+  },
+  {
+    "text": " the",
+    "startMs": 19508,
+    "endMs": 19741,
+    "timestampMs": 19508,
+    "confidence": 1.0
+  },
+  {
+    "text": " right",
+    "startMs": 19741,
+    "endMs": 20129,
+    "timestampMs": 19741,
+    "confidence": 1.0
+  },
+  {
+    "text": " move",
+    "startMs": 20129,
+    "endMs": 20517,
+    "timestampMs": 20129,
+    "confidence": 1.0
+  },
+  {
+    "text": " Drop",
+    "startMs": 20517,
+    "endMs": 20819,
+    "timestampMs": 20517,
+    "confidence": 1.0
+  },
+  {
+    "text": " your",
+    "startMs": 20819,
+    "endMs": 21121,
+    "timestampMs": 20819,
+    "confidence": 1.0
+  },
+  {
+    "text": " vote",
+    "startMs": 21121,
+    "endMs": 21423,
+    "timestampMs": 21121,
+    "confidence": 1.0
+  },
+  {
+    "text": " below",
+    "startMs": 21423,
+    "endMs": 21801,
+    "timestampMs": 21423,
+    "confidence": 1.0
+  },
+  {
+    "text": " and",
+    "startMs": 21801,
+    "endMs": 22028,
+    "timestampMs": 21801,
+    "confidence": 1.0
+  },
+  {
+    "text": " subscribe",
+    "startMs": 22028,
+    "endMs": 22708,
+    "timestampMs": 22028,
+    "confidence": 1.0
+  },
+  {
+    "text": " to",
+    "startMs": 22708,
+    "endMs": 22859,
+    "timestampMs": 22708,
+    "confidence": 1.0
+  },
+  {
+    "text": " ByteDispatch",
+    "startMs": 22859,
+    "endMs": 23765,
+    "timestampMs": 22859,
+    "confidence": 1.0
+  },
+  {
+    "text": " for",
+    "startMs": 23765,
+    "endMs": 23992,
+    "timestampMs": 23765,
+    "confidence": 1.0
+  },
+  {
+    "text": " daily",
+    "startMs": 23992,
+    "endMs": 24370,
+    "timestampMs": 23992,
+    "confidence": 1.0
+  },
+  {
+    "text": " tech",
+    "startMs": 24370,
+    "endMs": 24672,
+    "timestampMs": 24370,
     "confidence": 1.0
   },
   {
     "text": " updates",
-    "startMs": 33678,
-    "endMs": 34267,
-    "timestampMs": 33678,
+    "startMs": 24672,
+    "endMs": 25276,
+    "timestampMs": 24672,
     "confidence": 1.0
   }
 ]

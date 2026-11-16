@@ -94,36 +94,42 @@ def craft_script_from_topic(topic: dict):
         )
     }
 
-def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_script: str = None, upload: bool = False):
+def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_script: str = None, upload: bool = False, custom_meta: dict = None):
     print("=" * 60)
     print("  🚀 GENERATING DAILY INTERNET SHORT (BYTEDISPATCH)")
     print("=" * 60)
 
     # 1. Fetch or Formulate Topic
-    if custom_script:
+    if custom_meta:
+        meta = custom_meta
+        if custom_script:
+            meta["script"] = custom_script
+        if custom_headline:
+            meta["headline"] = custom_headline
+    elif custom_script:
         meta = {
             "headline": custom_headline or (custom_topic.upper() if custom_topic else "BREAKING TECH NEWS"),
             "category": "TECH DISPATCH",
             "source": "VIRAL BREAKING",
             "stat": "🔥 Viral #1",
             "script": custom_script,
-            "topicTitle": "JENSEN HUANG",
-            "topicSubtitle": "NVIDIA FOUNDER & CEO",
-            "statChange": "-8.4%",
-            "statLabel": "NVIDIA (NVDA) STOCK REACTION",
-            "communityQuote": "If Jensen leaves, Nvidia loses its entire AI moat. Nobody else commands Silicon Valley like this.",
-            "communityAuthor": "@SiliconValleyDigest",
-            "pollQuestion": "CAN NVIDIA SURVIVE WITHOUT JENSEN?",
-            "pollOptionA": "NO — HE IS IRREPLACEABLE",
-            "pollOptionB": "YES — TOO BIG TO FAIL",
-            "pollPercentA": 74,
-            "pollPercentB": 26,
-            "youtube_title": f"{(custom_headline or custom_topic or 'Jensen Huang Out at Nvidia?')[:80]} #Shorts",
+            "topicTitle": custom_headline or "BREAKING NEWS",
+            "topicSubtitle": "CYBERSECURITY ALERT",
+            "statChange": "🔥 VIRAL",
+            "statLabel": "GLOBAL TECH COMMUNITY REACTION",
+            "communityQuote": "This changes everything. Nobody expected this to happen so quickly.",
+            "communityAuthor": "@TechInsider",
+            "pollQuestion": "IS THIS A CRITICAL RISK?",
+            "pollOptionA": "YES — MAJOR THREAT",
+            "pollOptionB": "NO — OVERBLOWN",
+            "pollPercentA": 78,
+            "pollPercentB": 22,
+            "youtube_title": f"{(custom_headline or custom_topic or 'Breaking Tech Alert')[:80]} #Shorts",
             "description": (
                 f"{custom_script}\n\n"
                 "Daily trending internet and tech stories by ByteDispatch.\n\n"
                 "🔔 Subscribe to @ByteDispatch for your daily internet briefing.\n\n"
-                "#Shorts #TechNews #Nvidia #JensenHuang #ByteDispatch"
+                "#Shorts #TechNews #CyberSecurity #ByteDispatch"
             )
         }
     elif custom_topic:
@@ -139,7 +145,7 @@ def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_s
     print(f"[Script]: {meta['script']}\n")
 
     # 2. Check / Fetch Topic Image
-    topic_img_path = os.path.join(REMOTION_DIR, "public", "topic_image.jpg")
+    topic_img_path = os.path.join(REMOTION_DIR, "public", meta.get("topicImage", "topic_image.jpg"))
     query_target = custom_topic or meta["headline"]
     if not os.path.exists(topic_img_path):
         fetch_wikipedia_image(query_target, topic_img_path)
@@ -155,25 +161,25 @@ def run_pipeline(custom_topic: str = None, custom_headline: str = None, custom_s
     # 4. Save Props JSON for Remotion
     props_data = {
         "headline": meta["headline"],
-        "category": meta["category"],
-        "source": meta["source"],
-        "stat": meta["stat"],
+        "category": meta.get("category", "TECH DISPATCH"),
+        "source": meta.get("source", "VIRAL BREAKING"),
+        "stat": meta.get("stat", "🔥 Viral Alert"),
         "audioFile": "audio.mp3",
         "captionsFile": "audio.json",
         "captions": captions,
         "watermark": "SUBSCRIBE TO @BYTEDISPATCH",
-        "topicImage": "topic_image.jpg",
-        "topicTitle": meta.get("topicTitle", "JENSEN HUANG"),
-        "topicSubtitle": meta.get("topicSubtitle", "NVIDIA FOUNDER & CEO"),
-        "statChange": meta.get("statChange", "-8.4%"),
-        "statLabel": meta.get("statLabel", "NVIDIA (NVDA) STOCK REACTION"),
-        "communityQuote": meta.get("communityQuote", "If Jensen leaves, Nvidia loses its entire AI moat. Nobody else commands Silicon Valley like this."),
-        "communityAuthor": meta.get("communityAuthor", "@SiliconValleyDigest"),
-        "pollQuestion": meta.get("pollQuestion", "CAN NVIDIA SURVIVE WITHOUT JENSEN?"),
-        "pollOptionA": meta.get("pollOptionA", "NO — HE IS IRREPLACEABLE"),
-        "pollOptionB": meta.get("pollOptionB", "YES — TOO BIG TO FAIL"),
-        "pollPercentA": meta.get("pollPercentA", 74),
-        "pollPercentB": meta.get("pollPercentB", 26),
+        "topicImage": meta.get("topicImage", "topic_image.jpg"),
+        "topicTitle": meta.get("topicTitle", "TECH BREAKTHROUGH"),
+        "topicSubtitle": meta.get("topicSubtitle", "BREAKING DISPATCH"),
+        "statChange": meta.get("statChange", "🔥 VIRAL"),
+        "statLabel": meta.get("statLabel", "COMMUNITY REACTION"),
+        "communityQuote": meta.get("communityQuote", "This is an unprecedented development in the tech space."),
+        "communityAuthor": meta.get("communityAuthor", "@TechRadar"),
+        "pollQuestion": meta.get("pollQuestion", "IS THIS A MAJOR ISSUE?"),
+        "pollOptionA": meta.get("pollOptionA", "YES — VERY SERIOUS"),
+        "pollOptionB": meta.get("pollOptionB", "NO — NOT A BIG DEAL"),
+        "pollPercentA": meta.get("pollPercentA", 75),
+        "pollPercentB": meta.get("pollPercentB", 25),
         "showAnchor": False,
     }
     props_path = os.path.join(REMOTION_DIR, "props.json")
